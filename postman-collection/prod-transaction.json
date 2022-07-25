@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "5f50412a-d633-42f3-adba-10619a6248ee",
+		"name": "PagseguroNuvemshop Teste de carga",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6378508"
+	},
+	"item": [
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "payment/boleto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store_id\":\"2247350\",\n    \"order_id\":\"609747337\",\n    \"currency\": \"BRL\",\n    \"email\": \"thomazrd@gmail.com\",\n    \"name\": \"Thomaz Reis Damasceno\",\n    \"cpf\": \"10821017616\",\n    \"phone\": \"\",\n    \"address\": \"Asdasdasd\",\n    \"city\": \"Belo Vale\",\n    \"state\": \"Minas Gerais\",\n    \"zipcode\": \"35473000\",\n    \"number\": \"89\",\n    \"locality\": \"Sdfsd\",\n    \"floor\": \"\",\n    \"country\": \"BR\",\n    \"shipping_price\": 0,\n    \"shipping_method\": \"Nos comunicaremos para coordenar a entrega do produto.\",\n    \"total_discount\": 0,\n    \"sub_total\": 1,\n    \"total\": 1,\n    \"lineItems\": [\n        {\n            \"id\": 863129752,\n            \"name\": \"Pao de Queijo\",\n            \"price\": \"1.00\",\n            \"quantity\": 1,\n            \"free_shipping\": false,\n            \"product_id\": 117685524,\n            \"variant_id\": 453752327,\n            \"thumbnail\": \"//d2r9epyceweg5n.cloudfront.net/stores/002/126/997/products/pao-de-queijo1-6cd404241601e4665116504831908852-100-0.jpg\",\n            \"variant_values\": \"\",\n            \"sku\": null,\n            \"properties\": [],\n            \"url\": \"https://thomazguitar.lojavirtualnuvem.com.br/produtos/pao-de-queijo/?variant=453752327\",\n            \"is_ahora_12_eligible\": true\n        }\n    ]\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/payment/boleto",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"payment",
+								"boleto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payment/pix",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store_id\":\"2247350\",\n    \"order_id\":\"609747337\",\n    \"currency\": \"BRL\",\n    \"email\": \"thomazrd@gmail.com\",\n    \"name\": \"Thomaz Reis Damasceno\",\n    \"cpf\": \"10821017616\",\n    \"phone\": \"\",\n    \"address\": \"Asdasdasd\",\n    \"city\": \"Belo Vale\",\n    \"state\": \"Minas Gerais\",\n    \"zipcode\": \"35473000\",\n    \"number\": \"89\",\n    \"locality\": \"Sdfsd\",\n    \"floor\": \"\",\n    \"country\": \"BR\",\n    \"shipping_price\": 0,\n    \"shipping_method\": \"Nos comunicaremos para coordenar a entrega do produto.\",\n    \"total_discount\": 0,\n    \"sub_total\": 5,\n    \"total\": 5,\n    \"lineItems\": [\n        {\n            \"id\": 850222488,\n            \"name\": \"Pao de Queijo\",\n            \"price\": \"1.00\",\n            \"quantity\": 5,\n            \"free_shipping\": false,\n            \"product_id\": 117685524,\n            \"variant_id\": 453752327,\n            \"thumbnail\": \"//d2r9epyceweg5n.cloudfront.net/stores/002/126/997/products/pao-de-queijo1-6cd404241601e4665116504831908852-100-0.jpg\",\n            \"variant_values\": \"\",\n            \"sku\": null,\n            \"properties\": [],\n            \"url\": \"https://thomazguitar.lojavirtualnuvem.com.br/produtos/pao-de-queijo/?variant=453752327\",\n            \"is_ahora_12_eligible\": true\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/payment/pix",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"payment",
+								"pix"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payment/card",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store_id\":\"2247350\",\n    \"order_id\":\"609747337\",\n    \"currency\": \"BRL\",\n    \"total_discount\": 0,\n    \"email\": \"thomazrd@gmail.com\",\n    \"name\": \"Thomaz Reis Damasceno\",\n    \"cpf\": \"10821017616\",\n    \"phone\": \"\",\n    \"address\": \"Asdasdasd\",\n    \"city\": \"Belo Vale\",\n    \"state\": \"Minas Gerais\",\n    \"zipcode\": \"35473000\",\n    \"number\": \"89\",\n    \"locality\": \"Sdfsd\",\n    \"floor\": \"\",\n    \"country\": \"BR\",\n    \"shipping_price\": 0,\n    \"shipping_method\": \"Nos comunicaremos para coordenar a entrega do produto.\",\n    \"total\": 1,\n    \"lineItems\": [\n        {\n            \"id\": 868907987,\n            \"name\": \"Pao de Queijo\",\n            \"price\": \"1.00\",\n            \"quantity\": 1,\n            \"free_shipping\": false,\n            \"product_id\": 117685524,\n            \"variant_id\": 453752327,\n            \"thumbnail\": \"//d2r9epyceweg5n.cloudfront.net/stores/002/126/997/products/pao-de-queijo1-6cd404241601e4665116504831908852-100-0.jpg\",\n            \"variant_values\": \"\",\n            \"sku\": null,\n            \"properties\": [],\n            \"url\": \"https://thomazguitar.lojavirtualnuvem.com.br/produtos/pao-de-queijo/?variant=453752327\",\n            \"is_ahora_12_eligible\": true\n        }\n    ],\n    \"cardNumber\": \"4539620659922097\",\n    \"cardCvc\": \"123\",\n    \"cardExpMonth\": \"12\",\n    \"cardExpYear\": \"26\",\n    \"cardBrand\": \"visa\",\n    \"cardHolderName\": \"Thomaz R\",\n    \"cardInstallments\": \"\",\n    \"sub_total\": 1\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/payment/card",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"payment",
+								"card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payment/qrcode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store_id\":\"2247350\",\n    \"order_id\":\"609747337\",\n    \"currency\": \"BRL\",\n    \"email\": \"thomazrd@gmail.com\",\n    \"name\": \"Thomaz Reis Damasceno\",\n    \"cpf\": \"10821017616\",\n    \"phone\": \"\",\n    \"address\": \"Asdasdasd\",\n    \"city\": \"Belo Vale\",\n    \"state\": \"Minas Gerais\",\n    \"zipcode\": \"35473000\",\n    \"number\": \"89\",\n    \"locality\": \"Sdfsd\",\n    \"floor\": \"\",\n    \"country\": \"BR\",\n    \"shipping_price\": 0,\n    \"shipping_method\": \"Nos comunicaremos para coordenar a entrega do produto.\",\n    \"total_discount\": 0,\n    \"sub_total\": 1,\n    \"total\": 1,\n    \"lineItems\": [\n        {\n            \"id\": 863953582,\n            \"name\": \"Pao de Queijo\",\n            \"price\": \"1.00\",\n            \"quantity\": 1,\n            \"free_shipping\": false,\n            \"product_id\": 117685524,\n            \"variant_id\": 453752327,\n            \"thumbnail\": \"//d2r9epyceweg5n.cloudfront.net/stores/002/126/997/products/pao-de-queijo1-6cd404241601e4665116504831908852-100-0.jpg\",\n            \"variant_values\": \"\",\n            \"sku\": null,\n            \"properties\": [],\n            \"url\": \"https://thomazguitar.lojavirtualnuvem.com.br/produtos/pao-de-queijo/?variant=453752327\",\n            \"is_ahora_12_eligible\": true\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/payment/qrcode",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"payment",
+								"qrcode"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
