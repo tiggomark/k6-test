@@ -15,7 +15,7 @@ grafana
 
 docker-compose run -v \
 /$PWD:/src \
-k6 run --vus 10 --duration 30s /src/scripts/prod-transaction.js
+k6 run --vus 100 --duration 30s /src/scripts/customer-app/prod.js
 
 -- Acessar o grafana
 http://localhost:3000
